@@ -6,7 +6,7 @@ import { ethers } from 'ethers'
 const { ethereum } = window
 const contractAddress = address.address
 const contractAbi = abi.abi
-const opensea_uri = `https://testnets.opensea.io/assets/rinkeby/${contractAddress}/`
+const opensea_uri = `https://testnets.opensea.io/assets/goerli/${contractAddress}/`
 
 const getEtheriumContract = () => {
   const connectedAccount = getGlobalState('connectedAccount')

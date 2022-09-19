@@ -8,7 +8,8 @@ contract Adulam is ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     string baseURI;
-    string public baseExtension = ".webp";
+    string public baseExtension = ".json";
+    string public baseImage = ".webp";
     uint256 public cost = 0.001 ether;
     uint256 public maxSupply = 99;
     bool public paused = false;
@@ -56,7 +57,7 @@ contract Adulam is ERC721Enumerable, Ownable {
                 supply + 1,
                 msg.sender,
                 msg.value,
-                tokenURI(supply + 1),
+                toImage(supply + 1),
                 block.timestamp
             )
         );
@@ -79,6 +80,13 @@ contract Adulam is ERC721Enumerable, Ownable {
         string memory currentBaseURI = _baseURI();
         return bytes(currentBaseURI).length > 0
             ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseExtension))
+            : "";
+    }
+
+    function toImage(uint256 tokenId) internal view returns (string memory) {
+        string memory currentBaseURI = _baseURI();
+        return bytes(currentBaseURI).length > 0
+            ? string(abi.encodePacked(currentBaseURI, tokenId.toString(), baseImage))
             : "";
     }
 

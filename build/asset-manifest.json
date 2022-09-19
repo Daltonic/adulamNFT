@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ec128daa.css",
+    "main.js": "/static/js/main.3de2d8d3.js",
+    "static/media/ethlogo.png": "/static/media/ethlogo.e933df8040b5b6ce4fda.png",
+    "index.html": "/index.html",
+    "main.ec128daa.css.map": "/static/css/main.ec128daa.css.map",
+    "main.3de2d8d3.js.map": "/static/js/main.3de2d8d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec128daa.css",
+    "static/js/main.3de2d8d3.js"
+  ]
+}
